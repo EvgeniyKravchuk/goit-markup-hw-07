@@ -1,0 +1,30 @@
+.main-section {
+  margin: 94px 0px;
+}
+
+.main-section-list {
+  display: flex;
+}
+
+.main-section-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.main-section-list-title {
+  @include mainFont(700, 14px, 1.142, 0.03em);
+  margin-bottom: 10px;
+}
+
+.main-section-list-text {
+  @include mainFont(400, 14px, 1.714, 0.03em);
+  color: $mainTextColor;
+  width: 270px;
+}
+
+.main-section-icon-container {
+  @extend %centeredFlex;
+  width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  margin-bottom: 30px;
+}

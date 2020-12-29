@@ -1,0 +1,35 @@
+.footer-center-side {
+  padding-top: 12px;
+}
+
+.undertitle {
+  @include mainFont(700, 14px, 1.142, 0.03em);
+  color: white;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.footer-social-links-list {
+  @extend %centeredFlex;
+}
+
+.footer-social-links-list-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.footer-social-list-link {
+  @extend %centeredFlex;
+  width: 44px;
+  height: 44px;
+  color: white;
+  fill: white;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    background-color: $activeColor;
+  }
+}

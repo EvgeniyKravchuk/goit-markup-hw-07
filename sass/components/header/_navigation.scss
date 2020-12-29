@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.nav-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-list-link {
+  @include mainFont(500, 14px, 1.142, 0.02em);
+  display: block;
+  color: #212121;
+  @include transition(color);
+  position: relative;
+  padding: 32px 0px;
+}
+
+.nav-list-link.current::after {
+  content: "";
+  display: block;
+  background-color: $activeColor;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1px;
+}
+
+.nav-list-link {
+  &:hover,
+  &:focus {
+    color: $activeColor;
+  }
+}

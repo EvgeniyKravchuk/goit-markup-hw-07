@@ -1,0 +1,23 @@
+.footer-left-side {
+  margin-right: 70px;
+}
+
+.footer-address-list {
+  margin-top: 20px;
+}
+
+.footer-address-list-item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-address-list-map {
+  @include mainFont(400, 14px, 1.714, 0.03em);
+  color: white;
+}
+
+.footer-address-list-link {
+  @include mainFont(400, 14px, 1.714, 0.03em);
+  color: rgba(255, 255, 255, 0.6);
+}

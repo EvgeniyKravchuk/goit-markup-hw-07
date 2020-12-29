@@ -1,0 +1,45 @@
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list-item {
+  &:not(:nth-child(3n + 0)) {
+    margin-right: 30px;
+  }
+}
+
+.portfolio-list-item {
+  margin-bottom: 30px;
+  border: 1px solid #eeeeee;
+  width: 370px;
+}
+
+.portfolio-list-link {
+  color: black;
+  width: 370px;
+}
+
+.portfolio-list-title {
+  @include mainFont(700, 18px, 2, 0.06em);
+  padding: 20px;
+}
+
+.portfolio-list-text {
+  @include mainFont(400, 16px, 1.875, 0.03em);
+  color: $mainTextColor;
+  padding: 0px 20px 20px 20px;
+}
+
+.portfolio-list-link {
+  display: block;
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.portfolio-list-img {
+  display: block;
+}

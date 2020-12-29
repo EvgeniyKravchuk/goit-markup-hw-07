@@ -1,0 +1,12 @@
+.container {
+  width: 1200px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  display: flex;
+}
+
+.title {
+  @include mainFont(700, 36px, 1.167, 0.03em);
+  text-align: center;
+  margin-bottom: 50px;
+}

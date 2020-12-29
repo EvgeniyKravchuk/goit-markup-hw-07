@@ -1,0 +1,29 @@
+.address {
+  margin-left: auto;
+}
+
+.address-list {
+  display: flex;
+}
+
+.address-list-link {
+  @include mainFont(500, 14px, 1.142, 0.02em);
+  @extend %centeredFlex;
+  color: $mainTextColor;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $activeColor;
+  }
+}
+
+.address-list-item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.address-icon {
+  fill: currentColor;
+  margin-right: 10px;
+}

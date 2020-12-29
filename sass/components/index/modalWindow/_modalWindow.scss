@@ -1,0 +1,163 @@
+.modal-window {
+  @extend %centeredAbsolute;
+  width: 528px;
+  height: 581px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: $borderRadius;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.is-hidden {
+  transform: scale(0);
+  @include transition(transform);
+}
+
+.close-button {
+  @extend %centeredFlex;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: white;
+  @include transition();
+  &:hover,
+  &:focus {
+    fill: $activeColor;
+  }
+}
+
+.modal-title {
+  @include mainFont(700, 20px, 1.15, 0.03em);
+  text-align: center;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-label {
+  @include mainFont(400, 12px, 1.166, 0.01em);
+  height: 58px;
+  display: flex;
+  flex-direction: column;
+  color: $mainTextColor;
+  margin-bottom: 10px;
+}
+
+.modal-form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: $borderRadius;
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-right: 11px;
+  padding-left: 42px;
+  cursor: pointer;
+  @include transition();
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  margin-top: 4px;
+  left: 0;
+  top: 0;
+}
+
+.modal-form-input:focus ~ .modal-form-input-icon {
+  fill: $activeColor;
+}
+
+.modal-form-input:focus {
+  border-color: $activeColor;
+  outline: none;
+}
+
+.modal-form-input-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  @include transition();
+}
+
+.modal-form-icon {
+  @extend %centeredAbsolute;
+}
+
+.modal-form-comments-label {
+  display: flex;
+  flex-direction: column;
+  @include mainFont(400, 12px, 1.166, 0.01em);
+  color: $mainTextColor;
+}
+
+.modal-form-comments-label-textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: $borderRadius;
+  height: 120px;
+  resize: none;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  @include transition();
+  &:focus {
+    border-color: $activeColor;
+    outline: none;
+  }
+  &::placeholder {
+    @include mainFont(400, 14px, 1.142, 0.01em);
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal-form-confirmation-label {
+  @extend %centeredFlex;
+  flex-direction: row-reverse;
+  @include mainFont(400, 14px, 1.714, 0.03em);
+  color: $mainTextColor;
+  margin-bottom: 30px;
+}
+
+.confirmation-details-link {
+  color: $activeColor;
+  text-decoration-skip-ink: none;
+}
+
+.modal-form-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  &:checked + .checkbox-icon {
+    background-color: $activeColor;
+    border: none;
+    background-image: url(../../../images/svg/active-checkbox.svg);
+    fill: white;
+  }
+}
+
+.checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin-right: 7px;
+}
+
+.modal-button-container {
+  @extend %centeredFlex;
+}

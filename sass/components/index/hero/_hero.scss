@@ -1,0 +1,42 @@
+.hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../../../images/bckg-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1600px;
+  margin: 0px auto;
+  padding: 200px;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  display: block;
+  @include mainFont(900, 44px, 1.363, 0.06em);
+  text-align: center;
+  color: white;
+  width: 700px;
+  margin-bottom: 30px;
+  min-height: 120px;
+}
+
+.hero-button {
+  @include mainFont(700, 16px, 1.875, 0.06em);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: $borderRadius;
+  background-color: $activeColor;
+  padding: 0px;
+  border-width: 0px;
+}

@@ -1,0 +1,29 @@
+//Шрифты
+@mixin mainFont($fontWeight, $fontSize, $lineHeight, $letterSpacing) {
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+@mixin secondaryFont($fontWeight, $fontSize, $lineHeight, $letterSpacing) {
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+}
+
+//Скорость трансформации активного цвета
+@mixin transition(
+  $type: color,
+  $time: 250ms,
+  $function: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $type;
+  transition-duration: $time;
+  transition-timing-function: $function;
+} ;
