@@ -50,7 +50,7 @@ button {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0px auto;
   padding: 0px 15px;
   display: -webkit-box;
@@ -223,7 +223,7 @@ button {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bckg-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1600px;
+  max-width: 1600px;
   margin: 0px auto;
   padding: 200px;
 }
@@ -496,6 +496,7 @@ button {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-size: cover;
 }
 
 .footer-left-side {
